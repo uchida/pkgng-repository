@@ -1,0 +1,16 @@
+# vagrant
+.vagrant
+
+# packer
+output-*
+*.box
+packer_cache
+
+# terraform
+variables.tf
+terraform.tfstate*
+
+# poudriere
+poudriere.key
+
+credential
