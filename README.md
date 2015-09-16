@@ -80,7 +80,9 @@ $ sudo cp /usr/local/etc/poudriere.d/options/* /vagrant/poudriere/options/
 
 now vagrant provision copy them on provision and build with these options.
 
-For detail about `poudriere options` command, consult `man 8 poudriere`.
+For detail about `poudriere` command and subcommands such as `poudriere options`,
+consult [`man 8 poudriere`](https://www.freebsd.org/cgi/man.cgi?query=poudriere&apropos=0&sektion=8&manpath=FreeBSD+10.2-RELEASE+and+Ports&arch=default&format=html) or
+[poudriere documents](https://github.com/freebsd/poudriere/wiki).
 
 ## Building custom ports
 
