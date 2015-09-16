@@ -1,7 +1,7 @@
 #!/bin/sh
 set -ex
 
-jail=freebsd:10:amd64
+jail=FreeBSD:10:amd64
 ports=default
 s3opt='--follow-symlinks --acl public-read --storage-class REDUCED_REDUNDANCY'
 

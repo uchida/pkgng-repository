@@ -35,7 +35,7 @@ generate poudriere sign private and public key with `openssl`
 ```console
 $ openssl genrsa -out poudriere/poudriere.key 4096
 $ chmod 0400 poudriere/poudriere.key
-$ openssl rsa -in poudriere/poudriere.key pubout -out poudriere/poudriere.cert
+$ openssl rsa -in poudriere/poudriere.key -pubout -out poudriere/poudriere.cert
 $ chmod 0444 poudriere/poudriere.key
 ```
 
