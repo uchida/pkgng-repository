@@ -9,9 +9,20 @@ This repository manages custom FreeBSD package repository hosted by S3, building
 
 Create S3 bucket with [terraform](terraform.io)
 
+prepare environment variables,
+note: [direnv](https://github.com/direnv/direnv) mey be usefull to keep and separate environment variables
+
+```console
+$ export AWS_ACCESS_KEY_ID={{ your AWS access key here }}
+$ export AWS_SECRET_ACCESS_KEY={{ your AWS secret access key here }}
+$ export AWS_DEFAULT_REGION={{ AWS region where you to }}
+$ export TF_VAR_bucket_name={{ bucket name to put your packages }}
+```
+
+plan and apply
+
 ```console
 $ pushd bucket
-$ edit variables.tf
 $ terraform plan
 $ terraform apply
 $ popd

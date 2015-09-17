@@ -7,10 +7,10 @@ output-*
 packer_cache
 
 # terraform
-variables.tf
 terraform.tfstate*
 
 # poudriere
 poudriere.key
 
+.envrc
 credential

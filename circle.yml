@@ -1,12 +1,15 @@
 machine:
   environment:
     PATH: "${HOME}/vagrant/bin:${PATH}"
+    TERRAFORM_URL: "https://dl.bintray.com/mitchellh/terraform/terraform_0.6.3_linux_amd64.zip"
+    TERRAFORM_SHA256SUM: "0160fcdb7f0d00948d52912df0626a2e49db958b6df2c6108cbd8b3527ce1144"
     VAGRANT_URL: "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb"
     VAGRANT_SHA256SUM: "dcd2c2b5d7ae2183d82b8b363979901474ba8d2006410576ada89d7fa7668336"
 
 dependencies:
   cache_directories:
     - "~/vagrant"
+    - "~/bin"
   override:
     - |
       if [ ! -d "${HOME}/vagrant" ]; then
@@ -16,9 +19,16 @@ dependencies:
         sudo dpkg -i vagrant.deb
         cp -aR /opt/vagrant "${HOME}/vagrant"
       fi
+    - |
+      if [ ! -e "${HOME}/bin/terraform" ]; then
+        curl -Lo terraform.zip "${TERRAFORM_URL}"
+        echo "${TERRAFORM_SHA256SUM}  terraform.zip" | sha256sum -c || exit 1
+        unzip -d ~/bin terraform.zip
+      fi
 
 test:
   override:
+    - terraform plan -var bucket_name=null bucket
     - find poudriere/portshaker-config -type f -print0 | xargs -0 sh -n
     - find poudriere -name '*.sh' -print0 | xargs -0 sh -n
     - sh -n poudriere/portshaker.conf
