@@ -1,6 +1,6 @@
 # pkgng-repository
 
-[![License](https://img.shields.io/github/license/uchida/packer-freebsd.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
+[![License](https://img.shields.io/github/license/uchida/pkgng-repository.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
 
 This repository manages custom FreeBSD package repository hosted by S3, building packages with [uchida/poudriere](https://atlas.hashicorp.com/uchida/boxes/poudriere) vagrant box.
 
