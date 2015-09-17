@@ -1,0 +1,7 @@
+test:
+  override:
+    - find poudriere/portshaker-config -type f -print0 | xargs -0 sh -n
+    - find poudriere -name '*.sh' -print0 | xargs -0 sh -n
+    - sh -n poudriere/portshaker.conf
+    - sh -n poudriere/poudriere.conf
+    - sh -n provision.sh
