@@ -29,7 +29,7 @@ resource "aws_iam_access_key" "main" {
 }
 
 resource "template_file" "policy" {
-  filename = "s3-sync-policy.json"
+  filename = "${path.module}/s3-sync-policy.json"
   vars {
     bucket = "${aws_s3_bucket.main.id}"
   }
