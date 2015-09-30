@@ -9,8 +9,7 @@ Vagrant.configure(2) do |config|
     #vb.gui = true
   end
   config.ssh.shell = "/bin/sh"
-  config.vm.network "private_network", ip: "10.0.1.15"
-  config.vm.synced_folder ".", "/vagrant", nfs: true
+  config.vm.synced_folder ".", "/vagrant", type: 'rsync'
 
   config.vm.provision "shell", path: "provision.sh"
 end

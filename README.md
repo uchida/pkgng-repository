@@ -53,7 +53,7 @@ $ chmod 0444 poudriere/poudriere.key
 
 ## Building and distribiting packages
 
-With `vagrant provision`, start building packages and S3 sync, requires [vagrant](https://www.vagrantup.com/).
+With `vagrant provision`, start building packages and S3 sync, requires [vagrant](https://www.vagrantup.com/) and rsync to sync folder for vagrant.
 
 ```console
 $ vagrant up --no-provision
