@@ -10,7 +10,7 @@ This repository manages custom FreeBSD package repository hosted by S3, building
 Create S3 bucket with [terraform](terraform.io)
 
 prepare environment variables,
-note: [direnv](https://github.com/direnv/direnv) mey be usefull to keep and separate environment variables
+note: [direnv](https://github.com/direnv/direnv) may be usefull to separate secret environment variables from repository.
 
 ```console
 $ export AWS_ACCESS_KEY_ID={{ your AWS access key here }}
@@ -28,7 +28,7 @@ $ terraform apply
 $ popd
 ```
 
-and then, generate environment variables settings to access S3 bucket with [jq](https://stedolan.github.io/jq/)
+and then, generate environment variables settings to access S3 bucket with [jq](https://stedolan.github.io/jq/) for Vagrant provision.
 
 ```console
 $ cat <<__EOF__ > credential
@@ -78,6 +78,7 @@ sample client configuration:
   ```
 
 ## Customizing build options
+
 You could set ports option in advance, in vagrant box
 
 ```console
