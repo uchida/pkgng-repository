@@ -11,6 +11,7 @@ terraform.tfstate*
 
 # poudriere
 poudriere.key
+poudriere.cert
 
 .envrc
 credential
