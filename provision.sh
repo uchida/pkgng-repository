@@ -5,7 +5,7 @@ jail=FreeBSD:10:amd64
 ports=default
 s3opt='--follow-symlinks --acl public-read --storage-class REDUCED_REDUNDANCY'
 
-pkg install -y rsync
+pkg install -y rsync || :
 
 mkdir -p /usr/local/etc/ssl/keys
 chmod 0600 /usr/local/etc/ssl/keys
