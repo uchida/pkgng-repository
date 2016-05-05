@@ -1,7 +1,7 @@
 # pkgng-repository
 
-[![CircleCI](https://img.shields.io/circleci/project/uchida/pkgng-repository.svg)](https://circleci.com/gh/uchida/pkgng-repository)
-[![License](https://img.shields.io/github/license/uchida/pkgng-repository.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
+[![CircleCI](https://img.shields.io/circleci/project/uchida/pkgng-repository.svg?maxAge=2592000)](https://circleci.com/gh/uchida/pkgng-repository)
+[![License](https://img.shields.io/github/license/uchida/pkgng-repository.svg?maxAge=2592000)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 
 This repository manages custom FreeBSD package repository hosted by S3, building packages with [uchida/poudriere](https://atlas.hashicorp.com/uchida/boxes/poudriere) vagrant box.
 
