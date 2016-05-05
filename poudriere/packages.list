@@ -12,7 +12,7 @@ lang/python27
 mail/dovecot2
 mail/libspf2
 mail/opendkim
-mail/postfix
+mail/postfix211
 mail/ssmtp
 net/avahi-autoipd
 net/netatalk3
