@@ -29,7 +29,7 @@ shells/bash
 shells/bash-completion
 shells/zsh
 sysutils/lsof
-sysutils/syslog-ng
+sysutils/syslog-ng37
 sysutils/tmux
 sysutils/tracker
 textproc/ack
