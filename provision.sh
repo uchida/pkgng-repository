@@ -30,7 +30,7 @@ else
   portshaker
 fi
 
-poudriere bulk -j "${jail}" -p "${ports}" -f /vagrant/poudriere/packages.list || :
+poudriere bulk -J `sysctl -n hw.ncpu` -j "${jail}" -p "${ports}" -f /vagrant/poudriere/packages.list || :
 
 pkg install -y py27-pip
 pip install awscli
